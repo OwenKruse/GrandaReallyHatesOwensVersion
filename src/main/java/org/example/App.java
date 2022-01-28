@@ -26,14 +26,15 @@ public class App
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println("Hello, I'm Grandma Betty");
+        Grandma grandma = new Evenly();
+        System.out.println("Hello, I'm Grandma " + grandma.getName());
 
         int g = 5;
         while(g <= 5 ){
             Scanner s = new Scanner(System.in);
             System.out.println("Tell my a word. I let you know if I hate it or not.");
             String input = s.nextLine();
-            if (hasDoubleLetters(input) == true) {
+            if (grandma.likesWord(input) == true) {
                 g--;
                 System.out.println("I hate that word.");
                 System.out.println("You have " + g + " tries left.");
@@ -56,24 +57,5 @@ public class App
      * @return true if str has any consecutive letters that are identical; false if not.
      */
 
-    public static boolean hasDoubleLetters(String str) {
-        int t = 1;
 
-        if (str.length() == 0) {
-
-            return true;
-
-        } else {
-            while (t != str.length()) {
-                if (str.charAt(t) == str.charAt(t - 1)) {
-
-                    return false;
-
-                } else {
-                    t++;
-                }
-            }
-            return true;
-        }
-    }
 }

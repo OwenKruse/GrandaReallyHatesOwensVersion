@@ -10,10 +10,5 @@ import org.junit.Test;
  */
 public class AppTest 
 {
-    @Test
-    public void testHasdoubleLetters() {
-        assertTrue(App.hasDoubleLetters("cheese"));
-        assertFalse(App.hasDoubleLetters("bog"));
-        assertFalse(App.hasDoubleLetters(""));
-    }
+
 }
